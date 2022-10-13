@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 97vh;
+        background-color: #16615b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .section {
+        background-color: aliceblue;
+        border-radius: 10px;
+        width: 75%;
+        height: auto;
+      }
+
+      @media screen and (min-width: 768px) {
+        .section {
+          width: 50%;
+        }
+      }
+      .content {
+        font-size: 2rem;
+        color: black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+      .timer {
+        padding: 0.5rem 0;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: unset;
+        cursor: pointer;
+        background-color: #16615b;
+        color: #fff;
+        transition: all ease 0.3s;
+      }
+      button:hover {
+        background-color: #fff;
+        color: #16615b;
+        border: 1px solid #16615b;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="content">
+        <h3>Meu Timer</h3>
+        <div class="timer">00:00:00</div>
+        <div>
+          <button onclick="iniciar()" class="iniciar">Iniciar</button>
+          <button onclick="pausar()" class="pausar">Pausar</button>
+          <button onclick="zerar()" class="zerar">Zerar</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="./timer.js"></script>
+  </body>
+</html>
